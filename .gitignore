@@ -1,0 +1,18 @@
+# WordPress sensible
+wp-config.php
+wp-config-sample.php
+
+# Uploads
+wp-content/uploads/
+
+# Caché y logs
+wp-content/cache/
+wp-content/upgrade/
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
