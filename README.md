@@ -7,7 +7,7 @@
 
 ## 🌐 Vista previa del sitio
 
-![Vista previa LeonGym](./assets/pluggins.png)
+![Vista previa LeonGym](./assets/home.png)
 
 ---
 
