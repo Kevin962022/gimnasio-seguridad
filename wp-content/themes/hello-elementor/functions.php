@@ -271,3 +271,17 @@ if ( ! function_exists( 'hello_elementor_body_open' ) ) {
 require HELLO_THEME_PATH . '/theme.php';
 
 HelloTheme\Theme::instance();
+
+// Ocultar versión de WordPress
+remove_action('wp_head', 'wp_generator');
+add_filter('the_generator', '__return_empty_string');
+
+// Ocultar versión en scripts y estilos
+function ocultar_version_wp($src) {
+    if (strpos($src, 'ver=') !== false) {
+        $src = remove_query_arg('ver', $src);
+    }
+    return $src;
+}
+add_filter('style_loader_src', 'ocultar_version_wp', 9999);
+add_filter('script_loader_src', 'ocultar_version_wp', 9999);

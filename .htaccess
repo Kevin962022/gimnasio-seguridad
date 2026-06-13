@@ -34,3 +34,26 @@ Options -Indexes
   Order Deny,Allow
   Deny from all
 </FilesMatch>
+
+# Bloquear readme.html
+<Files readme.html>
+  Order Deny,Allow
+  Deny from all
+</Files>
+
+# Bloquear wp-cron.php público
+<Files wp-cron.php>
+  Order Deny,Allow
+  Deny from all
+</Files>
+
+# Ocultar versión de PHP y nginx
+<IfModule mod_headers.c>
+  Header unset X-Powered-By
+  Header always unset X-Powered-By
+  Header unset Server
+  Header always unset Server
+</IfModule>
+
+# Ocultar versión en errores
+ServerSignature Off
